@@ -57,6 +57,10 @@ class mod_customcert_mod_form extends moodleform_mod {
 
         $mform->addElement('header', 'options', get_string('options', 'customcert'));
 
+        $mform->addElement('selectyesno', 'verifyany', get_string('verifycertificateanyone', 'customcert'));
+        $mform->setType('verifyany', 0);
+        $mform->addHelpButton('verifyany', 'verifycertificateanyone', 'customcert');
+
         $mform->addElement('selectyesno', 'emailstudents', get_string('emailstudents', 'customcert'));
         $mform->setType('emailstudents', 0);
         $mform->addHelpButton('emailstudents', 'emailstudents', 'customcert');
