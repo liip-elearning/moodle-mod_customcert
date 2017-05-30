@@ -57,10 +57,6 @@ class mod_customcert_mod_form extends moodleform_mod {
 
         $mform->addElement('header', 'options', get_string('options', 'customcert'));
 
-        $mform->addElement('selectyesno', 'verifyany', get_string('verifycertificateanyone', 'customcert'));
-        $mform->setType('verifyany', 0);
-        $mform->addHelpButton('verifyany', 'verifycertificateanyone', 'customcert');
-
         $mform->addElement('selectyesno', 'emailstudents', get_string('emailstudents', 'customcert'));
         $mform->setType('emailstudents', 0);
         $mform->addHelpButton('emailstudents', 'emailstudents', 'customcert');
@@ -72,6 +68,10 @@ class mod_customcert_mod_form extends moodleform_mod {
         $mform->addElement('text', 'emailothers', get_string('emailothers', 'customcert'), array('size' => '40'));
         $mform->setType('emailothers', PARAM_TEXT);
         $mform->addHelpButton('emailothers', 'emailothers', 'customcert');
+
+        $mform->addElement('selectyesno', 'verifyany', get_string('verifycertificateanyone', 'customcert'));
+        $mform->setType('verifyany', 0);
+        $mform->addHelpButton('verifyany', 'verifycertificateanyone', 'customcert');
 
         $mform->addElement('text', 'requiredtime', get_string('coursetimereq', 'customcert'), array('size' => '3'));
         $mform->setType('requiredtime', PARAM_INT);
